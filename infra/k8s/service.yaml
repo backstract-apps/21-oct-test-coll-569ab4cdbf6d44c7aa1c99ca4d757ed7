@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7-srv
+spec:
+  selector:
+    app: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9011
+  type: LoadBalancer

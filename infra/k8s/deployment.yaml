@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7-depl
+  labels:
+    app: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+  template:
+    metadata:
+      labels:
+        app: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+    spec:
+      containers:
+        - name: 21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:21-oct-test-coll-569ab4cdbf6d44c7aa1c99ca4d757ed7
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9011
